@@ -1,0 +1,10 @@
+{
+  "port": 1234,
+  "logRequests": true,
+  "logEvents": true,
+  "logRestartCause": true,
+  "consoleTxtColor": "",
+  "consoleVarColor": "",
+  "consoleAlertColor": "",
+  "consoleErrorColor": ""
+}

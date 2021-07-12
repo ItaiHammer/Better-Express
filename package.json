@@ -1,0 +1,31 @@
+{
+  "name": "better-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run better-express",
+    "better-express": "nodemon --quiet events.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItaiHammer/express-boilerplate.git"
+  },
+  "author": "Itai Hammer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItaiHammer/express-boilerplate/issues"
+  },
+  "bin": {
+    "better-experss-server": "./bin/create-app.js"
+  },
+  "homepage": "https://github.com/ItaiHammer/express-boilerplate#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
