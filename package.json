@@ -1,7 +1,7 @@
 {
   "name": "better-express",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.5",
+  "description": "Better Express is an NPM module for creating a custom environment with extra features for Express development.",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -13,13 +13,11 @@
     "url": "git+https://github.com/ItaiHammer/express-boilerplate.git"
   },
   "author": "Itai Hammer",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ItaiHammer/express-boilerplate/issues"
   },
-  "bin": {
-    "better-experss": "./bin/create-app.js"
-  },
+  "bin": "./bin/create-app.js",
   "keywords": [
     "better-express",
     "better exppress",
