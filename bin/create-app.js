@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-require('colors');
-console.log('Starting Better Express cloning'.cyan)
-const {execSync} = require('child_process');
+import 'colors';
+import { execSync } from 'child_process';
 
 function runCommand(command) {
   try {
@@ -18,16 +17,17 @@ const repoLink = 'https://github.com/ItaiHammer/Better-Express.git';
 const gitCheckoutCommand = `git clone --depth 1 ${repoLink} ${repoName}`;
 const installDepsCommand = `cd ${repoName} && npm install`;
 
-console.log(`Cloning the repository with name ${repoName}`.cyan);
+console.log(`Cloning the repository with name `.cyan + `${repoName}`.green);
 const checkedOut = runCommand(gitCheckoutCommand);
 
-if (!checkedOut) process.exit(1)
+if (!checkedOut) process.exit(1);
 
-console.log(`Installing dependecies for ${repoName}`.cyan);
+console.log(`Installing dependecies for `.cyan`${repoName}`.green);
 const installedDeps = runCommand(installDepsCommand);
 
-if (!installedDeps) process.exit(1)
+if (!installedDeps) process.exit(1);
 
-console.log(`Congradulations! You are ready. Follow the following commands to start.`.cyan)
-console.log(`cd ${repoName} && npm start`.cyan)
-
+console.log(
+  `Congradulations! You are ready. Follow the following commands to start.`.cyan
+);
+console.log(`cd ${repoName} && npm start`.cyan);
