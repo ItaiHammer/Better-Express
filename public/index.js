@@ -6,7 +6,7 @@ let raf;
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
-const ballcount = 10;
+const ballcount = Math.floor(randomIntFromRange(3, 15));
 let balls = [];
 
 function updatePort() {
@@ -39,8 +39,8 @@ for (let i = 0; i < ballcount; i++) {
   const x = randomIntFromRange(radius, canvas.width - radius);
   const y = randomIntFromRange(radius, canvas.height - radius);
 
-  const vx = randomIntFromRange(2, 4);
-  const vy = randomIntFromRange(2, 4);
+  const vx = randomIntFromRange(-4, 4);
+  const vy = randomIntFromRange(-4, 4);
 
   balls.push(new Ball(x, y, radius, 'rgb(255, 143, 143)', vx, vy));
 }
