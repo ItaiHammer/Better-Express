@@ -7,8 +7,7 @@ Better Express is an NPM module for creating a custom environment with extra fea
 Use npx to install Better Express.
 
 ```bash
-npx install better-Express
-npx better-express-server app-name
+npx better-express app-name
 ```
 
 ## Usage

@@ -22,7 +22,7 @@ const checkedOut = runCommand(gitCheckoutCommand);
 
 if (!checkedOut) process.exit(1);
 
-console.log(`Installing dependecies for `.cyan`${repoName}`.green);
+console.log(`Installing dependecies for `.cyan + `${repoName}`.green);
 const installedDeps = runCommand(installDepsCommand);
 
 if (!installedDeps) process.exit(1);
