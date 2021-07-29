@@ -40,9 +40,6 @@ nodemon({ script: './app.js' })
             exec(`start chrome http://localhost:${port}`, (err) => {
                 if (err) {
                     console.error(err);
-                } else {
-                    console.log('success open');
-                    console.log('opened');
                 }
             });
         }

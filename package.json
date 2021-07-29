@@ -1,6 +1,6 @@
 {
     "name": "better-express",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Better Express is an NPM module for creating a custom environment with extra features for Express development.",
     "main": "app.js",
     "type": "module",
