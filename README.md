@@ -35,44 +35,46 @@ In the main directory, you can find a props folder, if you open the file called 
 Here is a list of all of the props and what they do.
 In parentheses after each prop is its type, and after that in italics you can see if it is required or not. (_Required_ means you can't leave it blank or as an empty string because it has no default value)
 
-- **Port** (Int) _Required_ **-** This is the port the Better Express application is going use.
+-   **Port** (Int) _Required_ **-** This is the port the Better Express application is going use.
 
-- **logRequests** (Bool) _Required_ **-** This lets the application to notify you when you get a request.
+-   **logRequests** (Bool) _Required_ **-** This lets the application to notify you when you get a request.
 
-- **logEvents** (Bool) _Required_ **-** This notfies you when events get triggered (like crash, restart, exit etc).
+-   **logEvents** (Bool) _Required_ **-** This notfies you when events get triggered (like crash, restart, exit etc).
 
-- **logRestartCause** (Bool) _Required_ **-** This notfies you when more information about a restart event.
+-   **logRestartCause** (Bool) _Required_ **-** This notfies you when more information about a restart event.
 
-- **consoleTxtColor** (String) _Not Required_ **-** This is the color of normal text from Better Express in the console.
-  Default value:
+-   **openTabOnStart** (Bool) _Not Required_ **-** This opens a tab of the Better Express application automaticly when the application starts.
 
-  ```json
-  "cyan"
-  ```
+-   **consoleTxtColor** (String) _Not Required_ **-** This is the color of normal text from Better Express in the console.
+    Default value:
 
-- **consoleVarColor** (String) _Not Required_ **-** This is the color of variables from Better Express in the console.
+    ```json
+    "cyan"
+    ```
 
-  Default value:
+-   **consoleVarColor** (String) _Not Required_ **-** This is the color of variables from Better Express in the console.
 
-  ```json
-  "green"
-  ```
+    Default value:
 
-- **consoleAlertColor** (String) _Not Required_ **-** This is the color of alerts from Better Express in the console.
+    ```json
+    "green"
+    ```
 
-  Default value:
+-   **consoleAlertColor** (String) _Not Required_ **-** This is the color of alerts from Better Express in the console.
 
-  ```json
-  "white"
-  ```
+    Default value:
 
-- **consoleErrorColor** (String) _Not Required_ **-** This is the color of error messages from Better Express in the console.
+    ```json
+    "white"
+    ```
 
-  Default value:
+-   **consoleErrorColor** (String) _Not Required_ **-** This is the color of error messages from Better Express in the console.
 
-  ```json
-  "red"
-  ```
+    Default value:
+
+    ```json
+    "red"
+    ```
 
 ## License
 
