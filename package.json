@@ -1,35 +1,35 @@
 {
-  "name": "better-express",
-  "version": "1.0.8",
-  "description": "Better Express is an NPM module for creating a custom environment with extra features for Express development.",
-  "main": "app.js",
-  "type": "module",
-  "scripts": {
-    "start": "npm run better-express",
-    "better-express": "nodemon --quiet events.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ItaiHammer/express-boilerplate.git"
-  },
-  "author": "Itai Hammer",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ItaiHammer/express-boilerplate/issues"
-  },
-  "bin": "./bin/create-app.js",
-  "keywords": [
-    "better-express",
-    "better exppress",
-    "express better",
-    "express-better"
-  ],
-  "homepage": "https://github.com/ItaiHammer/express-boilerplate#readme",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.12"
-  }
+    "name": "better-express",
+    "version": "1.0.9",
+    "description": "Better Express is an NPM module for creating a custom environment with extra features for Express development.",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "npm run better-express",
+        "better-express": "nodemon --quiet events.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ItaiHammer/express-boilerplate.git"
+    },
+    "author": "Itai Hammer",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ItaiHammer/express-boilerplate/issues"
+    },
+    "bin": "./bin/create-app.js",
+    "keywords": [
+        "better-express",
+        "better exppress",
+        "express better",
+        "express-better"
+    ],
+    "homepage": "https://github.com/ItaiHammer/express-boilerplate#readme",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12"
+    }
 }

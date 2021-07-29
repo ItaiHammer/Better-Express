@@ -11,21 +11,21 @@ const props = JSON.parse(fs.readFileSync('./props/default.json'));
 
 //props
 const consoleTxtColor =
-  props.consoleTxtColor == null || props.consoleTxtColor === ''
-    ? 'cyan'
-    : props.consoleTxtColor;
+    props.consoleTxtColor == null || props.consoleTxtColor === ''
+        ? 'cyan'
+        : props.consoleTxtColor;
 const consoleVarColor =
-  props.consoleVarColor == null || props.consoleVarColor === ''
-    ? 'green'
-    : props.consoleVarColor;
+    props.consoleVarColor == null || props.consoleVarColor === ''
+        ? 'green'
+        : props.consoleVarColor;
 const consoleAlertColor =
-  props.consoleAlertColor == null || props.consoleAlertColor === ''
-    ? 'white'
-    : props.consoleAlertColor;
+    props.consoleAlertColor == null || props.consoleAlertColor === ''
+        ? 'white'
+        : props.consoleAlertColor;
 const consoleErrorColor =
-  props.consoleErrorColor == null || props.consoleErrorColor === ''
-    ? 'red'
-    : props.consoleErrorColor;
+    props.consoleErrorColor == null || props.consoleErrorColor === ''
+        ? 'red'
+        : props.consoleErrorColor;
 
 //server
 const __dirname = path.resolve();
@@ -52,8 +52,8 @@ app.use('/getport', getPort);
 
 //listening
 app.listen(port, () =>
-  console.log(
-    'Started Better Express server on port: '[consoleTxtColor] +
-      `${port}`[consoleVarColor]
-  )
+    console.log(
+        'Started Better Express server on port: '[consoleTxtColor] +
+            `${port}`[consoleVarColor]
+    )
 );

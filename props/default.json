@@ -1,10 +1,11 @@
 {
-  "port": 1234,
-  "logRequests": true,
-  "logEvents": true,
-  "logRestartCause": true,
-  "consoleTxtColor": "",
-  "consoleVarColor": "",
-  "consoleAlertColor": "",
-  "consoleErrorColor": ""
+    "port": 1234,
+    "logRequests": true,
+    "logEvents": true,
+    "logRestartCause": true,
+    "openTabOnStart": true,
+    "consoleTxtColor": "",
+    "consoleVarColor": "",
+    "consoleAlertColor": "",
+    "consoleErrorColor": ""
 }
