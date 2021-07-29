@@ -4,13 +4,15 @@ Better Express is an NPM module for creating a custom environment with extra fea
 
 ## Installation
 
-Use npx to install Better Express.
+Globally install Better Express
 
 ```bash
-# globally install Better Express
 npm install -g better-express
+```
 
-# create your project
+Create your project!
+
+```bash
 npx better-express app-name
 ```
 
@@ -30,7 +32,7 @@ If you have a file that you don't want nodemon to restart when it saves you can 
 
 ## About Props
 
-You can customize your Better Express experiance by changing the props! (the props are basically like settings)
+You can customize your Better Express experience by changing the props! (the props are basically like settings)
 In the main directory, you can find a props folder, if you open the file called `defualt.json` you can see all of the properties for the application.<br>
 <img src="./bin\img\Props Capture.JPG" ><br>
 
@@ -41,13 +43,18 @@ In parentheses after each prop is its type, and after that in italics you can se
 
 -   **Port** (Int) _Required_ **-** This is the port the Better Express application is going use.
 
--   **logRequests** (Bool) _Required_ **-** This lets the application to notify you when you get a request.
+-   **logRequests** (Bool) _Required_ **-** This lets the application to notify you when the server gets a request.
 
 -   **logEvents** (Bool) _Required_ **-** This notfies you when events get triggered (like crash, restart, exit etc).
 
 -   **logRestartCause** (Bool) _Required_ **-** This notfies you when more information about a restart event.
 
 -   **openTabOnStart** (Bool) _Not Required_ **-** This opens a tab of the Better Express application automaticly when the application starts.
+    Default value:
+
+    ```json
+    true
+    ```
 
 -   **consoleTxtColor** (String) _Not Required_ **-** This is the color of normal text from Better Express in the console.
     Default value:
