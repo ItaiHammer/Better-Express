@@ -24,6 +24,51 @@ Once you installed the template project you can start up the express server usin
 npm start
 ```
 
+## Adding Routes
+
+You can create a new route by creating a new .js file inside the `./routes/` folder with a default export that equals to a new router.
+
+This file should look something like this:
+
+```js
+import express from 'express';
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+export default router;
+```
+
+Every file in the `./routes/` folder would automaticly be imported and used in the main express server.
+
+If you want to change the name if the route you can also add an additional export with variable called routeName that should equal to the route name.
+
+This should look something like this:
+
+```js
+import express from 'express';
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+export default router;
+export const routeName = 'routeName';
+```
+
+By if a routeName is not defined the server would use the file name as the routename.
+
+Ex:
+
+if the file name is `hello.js` the route is going to be `/hello`.
+
+## Public Folder
+
+Every file in the public folder will be public and avalible through the `/public` route.
+
 ## Nodemon
 
 Better Express uses an NPM module called [Nodemon](https://nodemon.io/) for restarting the server on save([Documentation](https://github.com/remy/nodemon#nodemon)).

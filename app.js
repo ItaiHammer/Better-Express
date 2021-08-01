@@ -40,15 +40,33 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(handleRequests);
 
-//route imports
-//!import your routes here
-import index from './routes/index.js';
-import getPort from './routes/getPort.js';
+// making everything in public folder static
+if (fs.existsSync('./public'))
+    app.use('/public', express.static(path.join(__dirname, 'public')));
 
 //routes
-//!use your routes here
-app.use('/', index);
-app.use('/getport', getPort);
+fs.readdir('./routes', (err, files) => {
+    //stopping if there are errors
+    if (err) return;
+
+    // filtering out none js files
+    files = files.filter((file) => file.substring(file.indexOf('.') === '.js'));
+
+    // importing and using files
+    files.forEach(async (fileName) => {
+        // handling route name
+        fileName = fileName.substring(0, fileName.indexOf('.'));
+        const file = await import(`./routes/${fileName}.js`);
+        const { routeName } = await import(`./routes/${fileName}.js`);
+        let routerName;
+
+        if (routeName == null) routerName = `/${fileName}`;
+        else routerName = routeName;
+
+        // using file
+        app.use(routerName, file.default);
+    });
+});
 
 //listening
 app.listen(port, () =>
