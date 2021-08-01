@@ -43,7 +43,7 @@ export default router;
 
 Every file in the `./routes/` folder would automaticly be imported and used in the main express server.
 
-If you want to change the name if the route you can also add an additional export with variable called routeName that should equal to the route name.
+If you want to change the name of the route you can also add an additional export with variable called routeName that should equal to the route name.
 
 This should look something like this:
 
@@ -59,7 +59,7 @@ export default router;
 export const routeName = 'routeName';
 ```
 
-By if a routeName is not defined the server would use the file name as the routename.
+If a routeName is not defined the Better Express would use the file name as the route name.
 
 Ex:
 
@@ -67,7 +67,7 @@ if the file name is `hello.js` the route is going to be `/hello`.
 
 ## Public Folder
 
-Every file in the public folder will be public and avalible through the `/public` route.
+Every file in the public folder will be public and available through the `/public` route.
 
 ## Nodemon
 
