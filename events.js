@@ -5,6 +5,7 @@ import dotEnv from 'dotEnv';
 dotEnv.config();
 import childProcess from 'child_process';
 const { exec } = childProcess;
+import input from 'input';
 
 //files
 const props = JSON.parse(fs.readFileSync('./props/default.json'));
@@ -34,15 +35,72 @@ const openTabOnStart =
 const isDev = process.env.ISDEV === 'true' ? true : false;
 const port = isDev ? props.port : process.env.PORT;
 
+// commands
+const commandList = [
+    {
+        read: 'restart',
+        shortcut: 'r',
+        run: () => {
+            console.log('Restarting...'[consoleTxtColor]);
+            nodemon.emit('restart');
+        },
+    },
+    {
+        read: 'quit',
+        shortcut: 'q',
+        run: () => {
+            console.log('Quitting...'[consoleTxtColor]);
+            nodemon.emit('quit');
+        },
+    },
+    {
+        check: (res) => {
+            if (res.substring(0, 6) === 'port =') {
+                return true;
+            }
+
+            return false;
+        },
+        run: (res) => {
+            const newPort = Number(res.substring(res.indexOf('=') + 1));
+            const propsFile = JSON.parse(
+                fs.readFileSync('./props/default.json')
+            );
+            propsFile.port = newPort;
+            fs.writeFileSync('./props/default.json', JSON.stringify(propsFile));
+            console.log(
+                `Changed Port to: `[consoleTxtColor] +
+                    `${newPort}`[consoleVarColor]
+            );
+            setTimeout(() => {
+                nodemon.emit('restart');
+            }, 0);
+        },
+    },
+];
+
+async function commands() {
+    // commands input
+    const res = await input.text('-');
+
+    // checking for all of the commands
+    commandList.forEach((command) => {
+        if (res === command.read || res === command.shortcut) {
+            command.run(res);
+        }
+        if (command.check != null) {
+            if (command.check(res)) command.run(res);
+        }
+    });
+
+    // checking for more commands
+    commands();
+}
+
 nodemon({ script: './app.js' })
     .on('start', () => {
-        if (openTabOnStart) {
-            exec(`start chrome http://localhost:${port}`, (err) => {
-                if (err) {
-                    console.error(err);
-                }
-            });
-        }
+        // checking for commands
+        commands();
     })
     .on('crash', () => {
         if (logEvents)
@@ -59,3 +117,11 @@ nodemon({ script: './app.js' })
         if (logRestartCause)
             console.log(`Server restarted due to: ${files}`[consoleAlertColor]);
     });
+
+if (openTabOnStart) {
+    exec(`start chrome http://localhost:${port}`, (err) => {
+        if (err) {
+            console.error(err);
+        }
+    });
+}

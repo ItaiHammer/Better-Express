@@ -69,6 +69,16 @@ if the file name is `hello.js` the route is going to be `/hello`.
 
 Every file in the public folder will be public and available through the `/public` route.
 
+## Commands
+
+When Better Express starts up it will let you use commands.
+
+-   **restart** or **r** **-** Restarts the better express server.
+
+-   **quit** or **q** **-** Quits the better express server.
+
+-   **port = [1234]** **-** Changes the port number.
+
 ## Nodemon
 
 Better Express uses an NPM module called [Nodemon](https://nodemon.io/) for restarting the server on save([Documentation](https://github.com/remy/nodemon#nodemon)).
