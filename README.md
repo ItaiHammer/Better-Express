@@ -77,7 +77,7 @@ When Better Express starts up it will let you use commands.
 
 -   **quit** or **q** **-** Quits the better express server.
 
--   **port = [1234]** **-** Changes the port number.
+-   **port = [New Port Number]** **-** Changes the port number.
 
 ## Nodemon
 
