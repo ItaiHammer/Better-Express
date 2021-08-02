@@ -36,48 +36,7 @@ const isDev = process.env.ISDEV === 'true' ? true : false;
 const port = isDev ? props.port : process.env.PORT;
 
 // commands
-const commandList = [
-    {
-        read: 'restart',
-        shortcut: 'r',
-        run: () => {
-            console.log('Restarting...'[consoleTxtColor]);
-            nodemon.emit('restart');
-        },
-    },
-    {
-        read: 'quit',
-        shortcut: 'q',
-        run: () => {
-            console.log('Quitting...'[consoleTxtColor]);
-            nodemon.emit('quit');
-        },
-    },
-    {
-        check: (res) => {
-            if (res.substring(0, 6) === 'port =') {
-                return true;
-            }
-
-            return false;
-        },
-        run: (res) => {
-            const newPort = Number(res.substring(res.indexOf('=') + 1));
-            const propsFile = JSON.parse(
-                fs.readFileSync('./props/default.json')
-            );
-            propsFile.port = newPort;
-            fs.writeFileSync('./props/default.json', JSON.stringify(propsFile));
-            console.log(
-                `Changed Port to: `[consoleTxtColor] +
-                    `${newPort}`[consoleVarColor]
-            );
-            setTimeout(() => {
-                nodemon.emit('restart');
-            }, 0);
-        },
-    },
-];
+import commandList from './commands.js';
 
 async function commands() {
     // commands input
@@ -99,8 +58,10 @@ async function commands() {
 
 nodemon({ script: './app.js' })
     .on('start', () => {
-        // checking for commands
-        commands();
+        setTimeout(() => {
+            // checking for commands
+            commands();
+        }, 0);
     })
     .on('crash', () => {
         if (logEvents)
