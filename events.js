@@ -36,7 +36,7 @@ const isDev = process.env.ISDEV === 'true' ? true : false;
 const port = isDev ? props.port : process.env.PORT;
 
 // commands
-import commandList from './commands.js';
+import commandList from './cmds.js';
 
 async function commands() {
     // commands input
