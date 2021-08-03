@@ -1,6 +1,6 @@
 # Better Express
 
-Better Express is an NPM module for creating a custom environment with extra features for Express development.
+Better Express is an NPM module for creating a custom environment with extra features for Express Server development.
 
 ## Installation
 
