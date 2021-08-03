@@ -24,6 +24,14 @@ Once you installed the template project you can start up the express server usin
 npm start
 ```
 
+## Requirements
+
+Better express requires you to have the following software installed:
+
+[Node JS](https://nodejs.org/en/)
+
+[Git](https://git-scm.com/s)
+
 ## Adding Routes
 
 You can create a new route by creating a new .js file inside the `./routes/` folder with a default export that equals to a new router.
