@@ -1,6 +1,6 @@
 # Better Express
 
-Better Express is an NPM module for creating a custom environment with extra features for Express development.
+Better Express is an NPM module for creating a custom environment with extra features for Express Server development.
 
 ## Installation
 
@@ -23,6 +23,14 @@ Once you installed the template project you can start up the express server usin
 ```bash
 npm start
 ```
+
+## Requirements
+
+Better express requires you to have the following software installed:
+
+[Node JS](https://nodejs.org/en/)
+
+[Git](https://git-scm.com/s)
 
 ## Adding Routes
 
@@ -68,6 +76,16 @@ if the file name is `hello.js` the route is going to be `/hello`.
 ## Public Folder
 
 Every file in the public folder will be public and available through the `/public` route.
+
+## Commands
+
+When Better Express starts up it will let you use commands.
+
+-   **restart** or **r** **-** Restarts the better express server.
+
+-   **quit** or **q** **-** Quits the better express server.
+
+-   **port = [New Port Number]** **-** Changes the port number.
 
 ## Nodemon
 
