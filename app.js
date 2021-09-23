@@ -61,7 +61,7 @@ fs.readdir('./routes', (err, files) => {
         let routerName;
 
         if (routeName == null) routerName = `/${fileName}`;
-        else routerName = `/${routeName}`;
+        else routerName = routeName;
 
         // using file
         app.use(routerName, file.default);
