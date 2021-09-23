@@ -86,7 +86,7 @@ If you have a file that you don't want nodemon to restart when it saves you can 
 ## About Props
 
 You can customize your Better Express experience by changing the props! (the props are basically like settings)
-In the main directory, you can find a props folder, if you open the file called `defualt.json` you can see all of the properties for the application.<br>
+In the main directory, you can find a props folder, if you open the file called `default.json` you can see all of the properties for the application.<br>
 <img src="./bin\img\Props Capture.JPG" ><br>
 
 ## Props
