@@ -53,9 +53,17 @@ nodemon({ script: './app.js' })
     });
 
 if (openTabOnStart) {
-    exec(`start chrome http://localhost:${port}`, (err) => {
-        if (err) {
-            console.error(err);
-        }
-    });
+    if (process.platform === 'win32') {
+        exec(`explorer \"http://localhost:${port}\"`, (err) => {
+            if (err) {
+                console.error(err);
+            }
+        });
+    } else {
+        exec(`open \"http://localhost:${port}\"`, (err) => {
+            if (err) {
+                console.error(err);
+            }
+        });
+    }
 }
