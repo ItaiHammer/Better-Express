@@ -8,5 +8,8 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// exporting the router
 export default router;
+
+// choosing a custom route name
 export const routeName = '/';
