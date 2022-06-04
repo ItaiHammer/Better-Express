@@ -1,3 +1,5 @@
+![Better Express](assets/banner.png)
+
 # Better Express
 
 Better Express is an NPM module for creating a custom environment with extra features for Express Server development.
